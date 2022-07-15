@@ -2,68 +2,71 @@
 <html>
   <head>
     <title>Welcome!</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      .column {
+        float: left;
+        width: 33.33%;
+        padding: 5px;
+      }
+      /*Clearfix (clear floats) */
+      .row:after {
+        content: "";
+        clear: both;
+        display: table;
+      }
+      /*Responsive layout- makes the 3 columns stack on top of
+      each other instead of next to each other*/
+      @media screen and (max-width: 500px) {
+        .column {
+          width: 100%;
+        }
+      }
+      .image {
+        width: 250px;
+        height: 250px;
+      }
+    </style>
   </head>
   <body>
     <h1 style="text-align: center">
       Welcome to Jordan Ordonez Chaguay's Bio Page!
     </h1>
-    <br />
-    <p style="text-align: center">
-      <a href="./myLandingPageImages/linkedin_photo.png" target="_blank">
+
+    <div class="row">
+      <div class="column">
         <img
+          class="image"
           src="./myLandingPageImages/linkedin_photo.png"
           alt="My Linked In Photo"
-          width="300"
-          height="300"
         />
-      </a>
-    </p>
-
-    <br />
-    <a href="./myLifeTimeLine/myLifeTimeline.html">
-      <h4 style="text-align: center; margin-top: -25px">My life time line!</h4>
-    </a>
-    <br />
-    <p style="text-align: center">
-      <a
-        href="./myProjects/myProjectsPageImages/joshua-reddekopp-SyYmXSDnJ54-unsplash.jpeg"
-        target="_blank"
-      >
+        <a href="./myLifeTimeLine/myLifeTimeline.html">
+          <h4>My life time line!</h4>
+        </a>
+      </div>
+      <div class="column">
         <img
+          class="image"
           src="./myProjects/myProjectsPageImages/joshua-reddekopp-SyYmXSDnJ54-unsplash.jpeg"
           alt="My Projects Images"
-          width="300"
-          height="300"
         />
-      </a>
-    </p>
-    <br />
-
-    <a href="./myProjects/myProjects.html">
-      <h4 style="text-align: center; margin-top: -25px">My Coding Projects</h4>
-    </a>
-
-    <br />
-
-    <p style="text-align: center">
-      <a
-        href="./myHobbies/myHobbiesPageImages/jason-leung-Xaanw0s0pMk-unsplash.jpeg"
-        target="_blank"
-      >
+        <a href="./myProjects/myProjects.html">
+          <h4>My Coding Projects</h4>
+        </a>
+      </div>
+      <div class="column">
         <img
+          class="image"
           src="./myHobbies/myHobbiesPageImages/jason-leung-Xaanw0s0pMk-unsplash.jpeg"
           alt="My Hobbies!"
-          width="300"
-          height="300"
         />
-      </a>
-    </p>
-
-    <br>
-    <a href="./myHobbies/myHobbies.html">
-      <h4 style="text-align:center; margin-top: -25px"> My Hobbies</h4>
-    </a>
-    <br />
+        <a href="./myHobbies/myHobbies.html">
+          <h4>My Hobbies</h4>
+        </a>
+      </div>
+    </div>
   </body>
 
   <div style="margin-top: 500px"></div>
