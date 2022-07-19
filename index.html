@@ -3,37 +3,67 @@
   <head>
     <title>Welcome!</title>
     <style>
-      * {
-        box-sizing: border-box;
-      }
       .column {
         float: left;
         width: 33.33%;
         padding: 5px;
+        text-align: center;
       }
       /*Clearfix (clear floats) */
-      .row:after {
+      .row {
         content: "";
         clear: both;
-        display: table;
+        display: flex;
+        flex-direction: row;
       }
-      /*Responsive layout- makes the 3 columns stack on top of
-      each other instead of next to each other*/
-      @media screen and (max-width: 500px) {
-        .column {
-          width: 100%;
-        }
-      }
+
       .image {
         width: 250px;
         height: 250px;
       }
+      .infoBox {
+        height: 100px;
+        width: 100%;
+        border-radius: 50px;
+        border-style: solid;
+        border-width: 10px;
+        border-color: red;
+        text-align: center;
+        margin-left: 10px;
+        margin-right: 10px;
+      }
+      .infoRow {
+        display: flex;
+        flex-direction: row;
+      }
+      .infoBoxText
     </style>
   </head>
   <body>
     <h1 style="text-align: center">
       Welcome to Jordan Ordonez Chaguay's Bio Page!
     </h1>
+    <div class="infoRow">
+      <div class="infoBox">
+        <a href="./contactPage/contactPage.html"
+        target="_parent">
+          <h3>Contact me</h3>
+        </a>
+      </div>
+      <div class="infoBox">
+        <a href="https://github.com/Jordonez123" target="_blank"
+          ><h3>Check out my GitHub</h3>
+        </a>
+      </div>
+      <div class="infoBox">
+        <a
+          href="https://soundcloud.com/jordan-ordonez-780260765"
+          target="_blank"
+        >
+          <h3>My SoundCloud</h3>
+        </a>
+      </div>
+    </div>
 
     <div class="row">
       <div class="column">
